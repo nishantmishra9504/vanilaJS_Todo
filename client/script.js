@@ -5,12 +5,17 @@ async function showData(url,status){
     const response = await fetch(url);
     let data = await response.json();
     let container = document.body.querySelector(".task-list");
-    let activeCont = document.body.querySelector("#task-list3");
-    let completedCont = document.body.querySelector("#task-list2");
+    let active_btn = document.getElementById("active-btn");
+    let completed_btn = document.getElementById("completed-btn");
+    let all_btn = document.getElementById("all-btn");
 
     let btn_container = document.body.querySelector('action-btn-container');
     let text = "";
     if(data.length != 0 && status == false){
+        container.style.display = "block";
+        active_btn.style.display = "block";
+        completed_btn.style.display = "block";
+        all_btn.style.display = "block";
         data.map((element,index)=>{
             //console.log(element);
             text += '<div class="tasks active_div">'

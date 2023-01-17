@@ -72,3 +72,15 @@
 #task-list4{
     display: none;
 }
+#task-list{
+    display: none;
+}
+#active-btn{
+    display: none;
+}
+#completed-btn{
+    display: none;
+}
+#all-btn{
+    display: none;
+}
